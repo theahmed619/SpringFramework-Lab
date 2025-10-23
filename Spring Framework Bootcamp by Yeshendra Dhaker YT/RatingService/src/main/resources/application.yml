@@ -1,0 +1,14 @@
+server:
+  port: 8096
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_rating
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true

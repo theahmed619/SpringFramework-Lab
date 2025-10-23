@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-center">Inbox</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">From</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Date</th>
+                <th scope="col">Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="email : ${emailslist}">
+                <td th:text="${email.from}"></td>
+                <td th:text="${email.subject}"></td>
+                <td th:text="${#dates.format(email.recivedDate, 'dd-MM-yyyy HH:mm')}"></td>
+                <td th:text="${email.content}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: FirstSpringMVCProject
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp

@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>User Reg</title>
+</head>
+<body>
+
+	<form th:action="@{/register}" th:object="${simpleuser}" method="post">
+		<input type="text" th:field=*{userName} placeholder="Enter Your Username"><br>
+		<p th:if="${#fields.hasErrors('userName')}" th:errors=*{userName}></p>
+		
+		<input type="text" th:field="*{email}" placeholder="Enter Your Email"><br>		
+		<p th:if="${#fields.hasErrors('email')}" th:errors=*{email}></p>
+		
+		<input type="password" th:field="*{password}" placeholder="Enter Your Password"><br>
+		<p th:if="${#fields.hasErrors('password')}" th:errors=*{password}></p>
+		
+		<button type="submit">Submit</button>
+	</form>
+
+</body>
+</html>

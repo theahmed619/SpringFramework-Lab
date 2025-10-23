@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_user_management
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+jwt:
+  secretKey: y1Z3H8Y3hUcqBdXOpSk9vOrIMBz8abqZihKfHQVp07K1cVZShZh9mGBWr8f+RvAP
+  expiration: 3600000
+
+server:
+  port: 8089

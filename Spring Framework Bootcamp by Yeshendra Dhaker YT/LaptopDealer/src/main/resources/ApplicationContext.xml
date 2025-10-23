@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="i3" class="com.example.yeshendrayt.i3"></bean>
+    <bean id="i5" class="com.example.yeshendrayt.i5"></bean>
+    <bean id="i7" class="com.example.yeshendrayt.i7"></bean>
+    
+    
+    <bean id="dellwithi3" class="com.example.yeshendrayt.Dell">
+    	<property name="processors" ref="i3"></property>
+    </bean>
+    
+       <bean id="dellwithi5" class="com.example.yeshendrayt.Dell">
+    	<property name="processors" ref="i5"></property>
+    </bean>
+    
+       <bean id="dellwithi7" class="com.example.yeshendrayt.Dell">
+    	<property name="processors" ref="i7"></property>
+    </bean>
+    
+    
+    <bean id="macbook" class="com.example.yeshendrayt.MacBook">
+    <constructor-arg ref="i3"></constructor-arg>
+    </bean>
+    
+    <bean id="microsoft" class="com.example.yeshendrayt.Microsoft">
+    <constructor-arg ref="i3"></constructor-arg>
+    </bean>
+
+</beans>
